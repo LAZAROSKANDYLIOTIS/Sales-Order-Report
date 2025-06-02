@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Function Group for Sales Order Details</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZFG_SALESORD_LTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZFG_SALESORD_L</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFM_SALESORD_L</FUNCNAME>
+     <SHORT_TEXT>Function Module for Sales Order Details</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SERDAT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_ERDAT_L</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SERNAM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_ERNAM_L</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>LT_OUTPUT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTT_SORDOUTPUT_L</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>WRONG_INPUT</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SERDAT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table Type for Creation Date</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SERNAM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table Type for User Name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LT_OUTPUT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table Type of Output Table for Sales Order Details</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WRONG_INPUT</PARAMETER>
+       <KIND>X</KIND>
+       <STEXT>Wrong Input</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
