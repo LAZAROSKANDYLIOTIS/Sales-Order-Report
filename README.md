@@ -150,10 +150,11 @@ if (end_date == "") {
 
 ## 📁 Project Structure
 
+```text
 Sales-Order-Report/
-├── images/ # Folder containing JPG and PNG screenshots of the project
-├── src/ # Contains ABAP source code (classes, reports, includes)
-├── .abapgit.xml # abapGit metadata file
-└── README.md # Project documentation
+├── images/         # Folder containing JPG and PNG screenshots of the project
+├── src/            # Contains ABAP source code (classes, reports, includes)
+├── .abapgit.xml    # abapGit metadata file
+└── README.md       # Project documentation
 
 
