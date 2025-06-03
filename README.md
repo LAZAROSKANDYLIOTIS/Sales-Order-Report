@@ -5,37 +5,45 @@ This ABAP project allows users to generate Smartforms and PDF forms directly fro
 The main program in this project is:  
 `zprs_sales_report_l.prog.abap`
 
-📊 Data Sources and Field Mapping
-This project uses three main SAP tables to display enriched sales order data:
+## 📊 Data Sources and Field Mapping
 
-1. VBAK – Sales Document: Header Data
-Field	Description
-VBELN	Sales Document Number
-ERDAT	Created On (Date)
-ERNAM	Created By (Username)
-AUDAT	Document Date
+This project uses **three main SAP tables** to display enriched sales order data:
 
-2. VBAP – Sales Document: Item Data
-Field	Description
-VBELN	Sales Document Number
-POSNR	Item Number
-MATNR	Material Number
-ARKTX	Short Text (Material)
-NETWR	Net Value
-WAERK	Currency
+### 1. `VBAK` – Sales Document: Header Data
 
-3. MAKT – Material Descriptions
-Field	Description
-MATNR	Material Number (key)
-MAKTX	Material Description
-SPRAS	Language Key
+| Field  | Description             |
+|--------|-------------------------|
+| VBELN  | Sales Document Number   |
+| ERDAT  | Created On (Date)       |
+| ERNAM  | Created By (Username)   |
+| AUDAT  | Document Date           |
 
-🔗 Primary and Foreign Key Relationships
-VBELN (Sales Document Number) is the primary key in VBAK and a foreign key in VBAP. It joins sales header and item data.
+### 2. `VBAP` – Sales Document: Item Data
 
-MATNR (Material Number) is the link between VBAP and MAKT to retrieve the material description (MAKTX).
+| Field  | Description             |
+|--------|-------------------------|
+| VBELN  | Sales Document Number   |
+| POSNR  | Item Number             |
+| MATNR  | Material Number         |
+| ARKTX  | Short Text (Material)   |
+| NETWR  | Net Value               |
+| WAERK  | Currency                |
 
-We fetch MAKTX from MAKT where MAKT-MATNR = VBAP-MATNR and a specific language (e.g., SPRAS = 'EN') is used.
+### 3. `MAKT` – Material Descriptions
+
+| Field  | Description              |
+|--------|--------------------------|
+| MATNR  | Material Number (key)    |
+| MAKTX  | Material Description     |
+| SPRAS  | Language Key             |
+
+---
+
+## 🔗 Primary and Foreign Key Relationships
+
+- `VBELN` (Sales Document Number) is the **primary key** in `VBAK` and a **foreign key** in `VBAP`. It joins sales header and item data.
+- `MATNR` (Material Number) is the link between `VBAP` and `MAKT` to retrieve the material description (`MAKTX`).
+- We fetch MAKTX from MAKT where MAKT-MATNR = VBAP-MATNR and a specific language (e.g., SPRAS = 'EN') is used.
 
 ## 🔍 Selection Criteria Screen
 
