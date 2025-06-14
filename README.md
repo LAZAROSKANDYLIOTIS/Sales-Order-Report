@@ -20,14 +20,13 @@ This project uses **three main SAP tables** to display enriched sales order data
 
 ### 2. `VBAP` – Sales Document: Item Data
 
-| Field  | Description             |
+ Field  | Description             |
 |--------|-------------------------|
 | VBELN  | Sales Document Number   |
 | POSNR  | Item Number             |
 | MATNR  | Material Number         |
-| ARKTX  | Short Text (Material)   |
-| NETWR  | Net Value               |
-| WAERK  | Currency                |
+| KWMENG | Order Quantity          |
+| VRKME  | Sales Unit              |
 
 ### 3. `MAKT` – Material Descriptions
 
